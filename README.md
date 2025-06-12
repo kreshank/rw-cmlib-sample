@@ -5,12 +5,12 @@
 A **header-only micro test framework** (~350 LOC) I wrote for as both a learning experience and a dependency-free, single file include  for a personal C++ utilities library. It features the following:
 
 * **Auto-registration with the Registry pattern**
-  * Having a `REGISTER_SUITE` macro hooks the suite into a singleton registry - allowin
+  * Having a `REGISTER_SUITE` macro hooks the suite into a singleton registry
 * **Exception-safe test execution**
-  * `UnitTest::Run()` catches thrown exceptions without crashing the runner, and forwards the message in the output.
+  * `UnitTest::Run()` catches thrown exceptions without crashing the runner, and forwards the message in the output
 * **Compile-time types, zero runtime dispatch**
   * `UnitTest<TExpected, TActual, FComparator>` is fully templated for speed
-  * Still supports heterogeneous tests in one suite; the registry stores everything as `std::unique_ptr<ISuite>`.
+  * Still supports heterogeneous tests in one suite; the registry stores everything as `std::unique_ptr<ISuite>`
 * **Tiny binary and fast builds**
   * The lack of external libraries keeps the final executable tiny and light
 
